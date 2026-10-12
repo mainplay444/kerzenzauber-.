@@ -85,3 +85,84 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8efe2">
+  <title>Zünde die Kerzen an | Kroizauber</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-card">
+    <header class="header">
+      <p class="brand">KROIZAUBER</p>
+      <span class="decor">✧</span>
+      <p class="subtitle">HANDGEMACHT MIT LIEBE</p>
+    </header>
+
+    <h1>Zünde die Kerzen an</h1>
+
+    <p class="description">
+      Zünde alle 10 Kerzen innerhalb von 30 Sekunden an
+      und sichere dir deinen Rabattcode!
+    </p>
+
+    <section class="stats" aria-live="polite">
+      <div class="stat">
+        <span>Kerzen angezündet</span>
+        <strong><span id="score">0</span> / 10</strong>
+      </div>
+
+      <div class="stat">
+        <span>Verbleibende Zeit</span>
+        <strong><span id="time">30</span> Sek.</strong>
+      </div>
+    </section>
+
+    <div id="candles" class="candles"
+         aria-label="Kerzen zum Anzünden"></div>
+
+    <div class="buttons">
+      <button id="startBtn" class="btn btn-primary">
+        Spiel starten
+      </button>
+
+      <button id="resetBtn" class="btn btn-secondary">
+        Neu starten
+      </button>
+    </div>
+
+    <p id="message" class="message" role="status">
+      Bist du bereit? Dann starte das Spiel!
+    </p>
+
+    <section id="result" class="result" hidden>
+      <div class="gift">🎁</div>
+      <h2 id="resultTitle">Herzlichen Glückwunsch!</h2>
+      <p id="resultText">
+        Du hast alle Kerzen angezündet!
+      </p>
+
+      <div id="promoBox" class="promo-box">
+        <span>DEIN RABATTCODE</span>
+        <strong id="promoCode">FREE20</strong>
+      </div>
+
+      <button id="copyBtn" class="btn btn-primary">
+        Rabattcode kopieren
+      </button>
+
+      <p id="copyMessage" class="copy-message"
+         aria-live="polite"></p>
+    </section>
+
+    <footer>
+      <p>Ein bisschen Licht, ein bisschen Wärme, ganz viel Gemütlichkeit.</p>
+      <a href="index.html">← Zurück zum Shop</a>
+    </footer>
+  </main>
+</body>
+</html>
