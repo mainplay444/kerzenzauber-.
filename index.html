@@ -3,148 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fbf6ef">
-  <meta name="description" content="Handgemachte Kerzen für gemütliche Momente. Entdecke deine Lieblingskerze bei Kerzenzauber.">
-
-  <title>Kerzenzauber | Handgemachte Kerzen</title>
-
+  <meta name="theme-color" content="#fbf5ef">
+  <meta name="description" content="Handgemachte Kerzen und besondere Geschenkideen von Kroizauber.">
+  <title>Kroizauber – Handgemachte Kerzen</title>
   <link rel="stylesheet" href="./main.css">
   <script src="./script.js" defer></script>
 </head>
-
 <body>
-  <header class="header">
-    <a class="logo" href="#start">Kerzen<span>zauber</span></a>
 
-    <nav aria-label="Hauptnavigation">
+  <header class="header">
+    <a class="logo" href="#start">Kroizauber<span> ✨</span></a>
+
+    <nav class="nav" aria-label="Hauptnavigation">
       <a href="#start">Startseite</a>
-      <a href="#produkte">Kerzen</a>
+      <a href="#produkte">Produkte</a>
       <a href="#ueber-uns">Über uns</a>
+      <a href="#kerzenspiel">Minispiel</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="#kerzen-spiel">Kerzenspiel</a>
     </nav>
   </header>
 
   <main>
-    <!-- Startseite -->
     <section class="hero" id="start">
       <div class="hero-content">
-        <p class="eyebrow">LICHT · DUFT · GEMÜTLICHKEIT</p>
-        <h1>Ein kleines Licht.<br><span>Ein großes Gefühl.</span></h1>
-        <p>Entdecke besondere Kerzen für gemütliche Momente und dein Zuhause.</p>
-        <a class="button" href="#produkte">Kollektion entdecken</a>
+        <span class="eyebrow">MIT LIEBE GEMACHT</span>
+        <h1>Ein kleines Licht.<br>Ein großes Gefühl.</h1>
+        <p>
+          Entdecke besondere Kerzen, liebevolle Geschenkideen
+          und gemütliche Düfte für dein Zuhause.
+        </p>
+        <a class="button" href="#produkte">Unsere Kerzen entdecken</a>
       </div>
-
-      <div class="hero-symbol" aria-hidden="true">✦</div>
+      <div class="hero-decoration" aria-hidden="true">
+        🕯️
+      </div>
     </section>
 
-    <!-- Produkte -->
     <section class="section" id="produkte">
       <div class="section-heading">
-        <p class="eyebrow">UNSERE KOLLEKTION</p>
-        <h2>Unsere Lieblingskerzen</h2>
-        <p>Finde dein Lieblingslicht.</p>
+        <span class="eyebrow">UNSERE KOLLEKTION</span>
+        <h2>Kerzen mit Charakter</h2>
+        <p>Finde deinen neuen Lieblingsduft.</p>
       </div>
 
-      <div class="products-grid" id="products"></div>
+      <div class="products-grid" id="products">
+        <p>Unsere Produkte werden geladen …</p>
+      </div>
     </section>
 
-    <!-- Über uns -->
     <section class="about" id="ueber-uns">
-      <div class="about-icon" aria-hidden="true">K</div>
-
-      <div>
-        <p class="eyebrow">KERZENZAUBER</p>
-        <h2>Licht für deine besonderen Momente</h2>
-        <p>Entdecke liebevoll ausgewählte Kerzen zum Entspannen, Dekorieren und Verschenken.</p>
+      <div class="about-inner">
+        <div class="about-symbol" aria-hidden="true">🤍</div>
+        <div>
+          <span class="eyebrow">DAS IST KROIZAUBER</span>
+          <h2>Kleine Dinge machen den Unterschied.</h2>
+          <p>
+            Kerzen bringen Wärme, Ruhe und Gemütlichkeit in den Alltag.
+            Bei Kroizauber findest du liebevoll ausgewählte Ideen
+            für dein Zuhause oder als Geschenk für besondere Menschen.
+          </p>
+          <a class="text-link" href="#kontakt">Schreib uns eine Nachricht →</a>
+        </div>
       </div>
     </section>
 
-    <!-- Kontakt -->
-    <section class="section contact" id="kontakt">
+    <section class="section game-section" id="kerzenspiel">
       <div class="section-heading">
-        <p class="eyebrow">KONTAKT</p>
-        <h2>Schreib uns</h2>
-        <p>Hast du Fragen? Wir freuen uns auf deine Nachricht.</p>
-      </div>
-
-      <form id="contact-form" class="contact-form">
-        <label for="customer-email">Deine E-Mail-Adresse</label>
-        <input
-          id="customer-email"
-          type="email"
-          placeholder="Deine E-Mail-Adresse"
-          required
-        >
-
-        <label for="customer-message">Deine Nachricht</label>
-        <textarea
-          id="customer-message"
-          rows="5"
-          placeholder="Schreibe deine Nachricht ..."
-          required
-        ></textarea>
-
-        <button class="button" type="submit">Nachricht vorbereiten</button>
-
-        <p class="form-note">Dein E-Mail-Programm öffnet sich zum Versenden.</p>
-        <p id="contact-status" role="status"></p>
-      </form>
-    </section>
-
-    <!-- Kerzenspiel: ganz unten auf der Seite -->
-    <section class="candle-game" id="kerzen-spiel">
-      <div class="game-heading">
-        <p class="eyebrow">EINE KLEINE HERAUSFORDERUNG</p>
-        <h2>Rette das Kerzenlicht!</h2>
-        <p>Halte alle 20 Kerzen 15 Sekunden lang am Brennen!</p>
-        <p class="game-instructions">
-          Alle 3 Sekunden geht eine zufällige Kerze aus.
-          Tippe auf eine erloschene Kerze, um sie wieder anzuzünden.
+        <span class="eyebrow">ZEIT FÜR EIN SPIEL</span>
+        <h2>Rette die Kerzen! 🕯️</h2>
+        <p>
+          Schaffst du es, alle 20 Kerzen 15 Sekunden lang
+          am Brennen zu halten? Wenn eine Kerze ausgeht,
+          tippe sie an, um sie wieder anzuzünden!
         </p>
       </div>
 
-      <div class="game-stats">
-        <div class="stat">
-          <span>Verbleibende Zeit</span>
-          <strong><span id="game-time">15</span> s</strong>
+      <div class="candle-game">
+        <div class="game-stats">
+          <div class="stat">
+            <span class="stat-label">Verbleibende Zeit</span>
+            <strong><span id="gameTime">15</span> Sek.</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Brennende Kerzen</span>
+            <strong><span id="gameLit">20</span> / 20</strong>
+          </div>
         </div>
 
-        <div class="stat">
-          <span>Brennende Kerzen</span>
-          <strong><span id="lit-count">20</span> / 20</strong>
-        </div>
+        <div
+          class="game-candles"
+          id="gameCandles"
+          aria-label="Zwanzig Kerzen"
+        ></div>
+
+        <p class="game-message" id="gameMessage" aria-live="polite">
+          Bereit? Starte das Spiel!
+        </p>
+
+        <button class="button game-button" id="startCandleGame" type="button">
+          Spiel starten
+        </button>
       </div>
+    </section>
 
-      <div
-        class="game-candles"
-        id="game-candles"
-        aria-label="Die 20 Spielkerzen"
-      ></div>
+    <section class="contact-section" id="kontakt">
+      <div class="contact-inner">
+        <div class="section-heading">
+          <span class="eyebrow">WIR SIND FÜR DICH DA</span>
+          <h2>Schreib uns</h2>
+          <p>Fragen zu unseren Produkten? Wir freuen uns auf deine Nachricht.</p>
+        </div>
 
-      <p class="game-message" id="game-message" role="status" aria-live="polite">
-        Bereit? Starte das Spiel!
-      </p>
+        <form id="contactForm" class="contact-form">
+          <label for="name">Dein Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Wie heißt du?"
+            required
+          >
 
-      <button class="button game-button" id="game-start" type="button">
-        Spiel starten
-      </button>
+          <label for="email">Deine E-Mail-Adresse</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="du@beispiel.de"
+            required
+          >
+
+          <label for="message">Deine Nachricht</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Wie können wir dir helfen?"
+            required
+          ></textarea>
+
+          <button class="button" type="submit">Nachricht vorbereiten</button>
+          <p class="form-note">
+            Dein E-Mail-Programm öffnet sich zum Versenden der Nachricht.
+          </p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
-    <a class="logo footer-logo" href="#start">Kerzen<span>zauber</span></a>
-    <p>Licht, Wärme und Gemütlichkeit.</p>
-
+    <a class="logo footer-logo" href="#start">Kroizauber ✨</a>
+    <p>Mit Liebe und einem kleinen Licht im Herzen.</p>
+    <p>© <span id="year"></span> Kroizauber</p>
     <div class="footer-links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="widerruf.html">Widerruf</a>
-      <a href="versand.html">Versand</a>
+      <a href="mailto:tatansavenok35@gmail.com">E-Mail</a>
+      <a href="#produkte">Produkte</a>
+      <a href="#kontakt">Kontakt</a>
     </div>
-
-    <p>© <span id="year"></span> Kerzenzauber</p>
   </footer>
+
 </body>
 </html>
