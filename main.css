@@ -934,3 +934,39 @@ footer a {
         gap: 6px;
     }
 }
+.candles {
+    display: grid;
+    grid-template-columns: repeat(5, 55px);
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+.candle {
+    width: 55px;
+    box-sizing: border-box;
+}
+
+.game-card {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (max-width: 380px) {
+    .candles {
+        grid-template-columns: repeat(2, 60px);
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .candle {
+        width: 60px;
+    }
+}
