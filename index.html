@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbf6ef">
+  <meta name="description" content="Handgemachte Kerzen für gemütliche Momente. Entdecke deine Lieblingskerze bei Kerzenzauber.">
 
+  <title>Kerzenzauber | Handgemachte Kerzen</title>
+
+  <link rel="stylesheet" href="./main.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <a class="logo" href="#start">Kerzen<span>zauber</span></a>
+
+    <nav aria-label="Hauptnavigation">
+      <a href="#start">Startseite</a>
+      <a href="#produkte">Kerzen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kerzen-spiel">Kerzenspiel</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Startseite -->
+    <section class="hero" id="start">
+      <div class="hero-content">
+        <p class="eyebrow">LICHT · DUFT · GEMÜTLICHKEIT</p>
+        <h1>Ein kleines Licht.<br><span>Ein großes Gefühl.</span></h1>
+        <p>Entdecke besondere Kerzen für gemütliche Momente und dein Zuhause.</p>
+        <a class="button" href="#produkte">Kollektion entdecken</a>
+      </div>
+
+      <div class="hero-symbol" aria-hidden="true">✦</div>
+    </section>
+
+    <!-- Produkte -->
+    <section class="section" id="produkte">
+      <div class="section-heading">
+        <p class="eyebrow">UNSERE KOLLEKTION</p>
+        <h2>Unsere Lieblingskerzen</h2>
+        <p>Finde dein Lieblingslicht.</p>
+      </div>
+
+      <div class="products-grid" id="products"></div>
+    </section>
+
+    <!-- Über uns -->
+    <section class="about" id="ueber-uns">
+      <div class="about-icon" aria-hidden="true">K</div>
+
+      <div>
+        <p class="eyebrow">KERZENZAUBER</p>
+        <h2>Licht für deine besonderen Momente</h2>
+        <p>Entdecke liebevoll ausgewählte Kerzen zum Entspannen, Dekorieren und Verschenken.</p>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section contact" id="kontakt">
+      <div class="section-heading">
+        <p class="eyebrow">KONTAKT</p>
+        <h2>Schreib uns</h2>
+        <p>Hast du Fragen? Wir freuen uns auf deine Nachricht.</p>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <label for="customer-email">Deine E-Mail-Adresse</label>
+        <input
+          id="customer-email"
+          type="email"
+          placeholder="Deine E-Mail-Adresse"
+          required
+        >
+
+        <label for="customer-message">Deine Nachricht</label>
+        <textarea
+          id="customer-message"
+          rows="5"
+          placeholder="Schreibe deine Nachricht ..."
+          required
+        ></textarea>
+
+        <button class="button" type="submit">Nachricht vorbereiten</button>
+
+        <p class="form-note">Dein E-Mail-Programm öffnet sich zum Versenden.</p>
+        <p id="contact-status" role="status"></p>
+      </form>
+    </section>
+
+    <!-- Kerzenspiel: ganz unten auf der Seite -->
+    <section class="candle-game" id="kerzen-spiel">
+      <div class="game-heading">
+        <p class="eyebrow">EINE KLEINE HERAUSFORDERUNG</p>
+        <h2>Rette das Kerzenlicht!</h2>
+        <p>Halte alle 20 Kerzen 15 Sekunden lang am Brennen!</p>
+        <p class="game-instructions">
+          Alle 3 Sekunden geht eine zufällige Kerze aus.
+          Tippe auf eine erloschene Kerze, um sie wieder anzuzünden.
+        </p>
+      </div>
+
+      <div class="game-stats">
+        <div class="stat">
+          <span>Verbleibende Zeit</span>
+          <strong><span id="game-time">15</span> s</strong>
+        </div>
+
+        <div class="stat">
+          <span>Brennende Kerzen</span>
+          <strong><span id="lit-count">20</span> / 20</strong>
+        </div>
+      </div>
+
+      <div
+        class="game-candles"
+        id="game-candles"
+        aria-label="Die 20 Spielkerzen"
+      ></div>
+
+      <p class="game-message" id="game-message" role="status" aria-live="polite">
+        Bereit? Starte das Spiel!
+      </p>
+
+      <button class="button game-button" id="game-start" type="button">
+        Spiel starten
+      </button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a class="logo footer-logo" href="#start">Kerzen<span>zauber</span></a>
+    <p>Licht, Wärme und Gemütlichkeit.</p>
+
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="widerruf.html">Widerruf</a>
+      <a href="versand.html">Versand</a>
+    </div>
+
+    <p>© <span id="year"></span> Kerzenzauber</p>
+  </footer>
+</body>
+</html>
