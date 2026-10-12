@@ -1,67 +1,75 @@
 "use strict";
 
-/* =====================================
-   KROIZAUBER – PRODUKTE
-===================================== */
-
 const shopEmail = "tatansavenok35@gmail.com";
 
 const products = [
   {
-    name: "Vanilletraum",
-    price: 5,
-    description: "Ein warmer, süßer Vanilleduft für gemütliche Abende.",
-    symbol: "🕯️",
-    subject: "Vanilletraum"
+    name: "rosengarten",
+    price: 5.00,
+    description: "Ein sanfter Lichtblick für entspannte Momente.",
+       image: "https://cdn.phototourl.com/member/2026-10-11-30ded1ea-9bc2-468d-a1b1-cd329c2d48d1.jpg",
+    link: "https://www.vinted.de/items/10334352328-handgemachte-bienenwachskerze-in-herzform-100-natur-honig-blutenduft",
+    bg: "#eee1d1",
+    wax: "#f2d9b9"
   },
   {
-    name: "Rosengarten",
-    price: 5,
-    description: "Eine romantische Geschenkidee mit blumigem Charakter.",
-    symbol: "🌹",
-    subject: "Rosengarten"
+    name: "waimachzbaum",
+    price:  5.00,
+    description: "Für gemütliche Pausen und kleine Auszeiten.",
+    image: "https://dark-leaf-727.linkyhost.com",
+    link: "https://www.vinted.de/items/10334202599-handgemachte-kerze-weihnachtsbaum-aus-naturlichem-wachs",
+    bg: "#f0dedc",
+    wax: "#e6b9b4"
   },
   {
-    name: "Blütenzauber",
-    price: 5,
-    description: "Eine liebevolle Kerzenidee für besondere Momente.",
-    symbol: "🌸",
-    subject: "Bluetenzauber"
+    name: "honig standart ",
+    price: 5.00,
+    description: "Ein Hauch von Wärme für dein Zuhause.",
+    image: "https://cdn.phototourl.com/member/2026-10-11-b09e7873-ad7d-431a-bc4e-f513ccc83777.jpg",
+    link: "https://www.vinted.de/items/10334260225-handgemachte-bienenwachskerze-100-naturlich-honigduft",
+    bg: "#e3e7d9",
+    wax: "#d2d9c4"
   },
   {
-    name: "Geschenklicht",
-    price: 5,
-    description: "Eine kleine Aufmerksamkeit für einen lieben Menschen.",
-    symbol: "🎁",
-    subject: "Geschenklicht"
+    name: "golden Abent [metal]",
+    price: 5.00,
+    description: "Ein romantischer Akzent für besondere Momente.",
+    image: "https://cdn.phototourl.com/member/2026-10-11-4f892ae9-3896-40de-a1ec-c3a6d1fe6815.jpg",
+    link: "https://www.vinted.de/items/10334499362-handgemachte-bienenwachskerze-100-natur-pur",
+    bg: "#efe4c9",
+    wax: "#ead5a4"
   },
   {
-    name: "Cremeweiß",
-    price: 5,
-    description: "Schlichtes Design für ein ruhiges und gemütliches Zuhause.",
-    symbol: "🤍",
-    subject: "Cremeweiss"
+    name: "Kerze Waldzauber",
+    price: 5.00,
+    description: "Inspiriert von der Schönheit der Natur.",
+    image: "https://cdn.phototourl.com/member/2026-10-11-ad0133de-9829-4d8d-8654-8f77fcb8074a.jpg",
+    link: "https://www.vinted.de/items/10334444539-handgemachte-kerze-aus-100-naturlichem-bienenwachs",
+    bg: "#eadfe9",
+    wax: "#d8c1d9"
   },
   {
-    name: "Abendruhe",
-    price: 5,
-    description: "Für entspannte Stunden und eine warme Atmosphäre.",
-    symbol: "✨",
-    subject: "Abendruhe"
+    name: "Kerze Goldener Abend",
+    price: 5.00,
+    description: "Ein warmes Licht für entspannte Abende.",
+    image: "https://cdn.phototourl.com/member/2026-10-11-b09e7873-ad7d-431a-bc4e-f513ccc83777.jpg",
+    link: "https://buy.stripe.com/test_00w9AUa22aRl4NkcaV00009",
+    bg: "#f0e0d4",
+    wax: "#e6bfa9"
   }
 ];
 
-/* =====================================
-   PRODUKTE ANZEIGEN
-===================================== */
+const container = document.getElementById("products");
+
+function formatPrice(price) {
+  return new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "EUR"
+  }).format(price);
+}
 
 function renderProducts() {
-  const container = document.getElementById("products");
-
-  if (!container) {
-    console.error('Der Bereich "#products" wurde nicht gefunden.');
-    return;
-  }
+  if (!container) return;
 
   container.replaceChildren();
 
@@ -69,78 +77,118 @@ function renderProducts() {
     const card = document.createElement("article");
     card.className = "product-card";
 
-    const visual = document.createElement("div");
-    visual.className = "product-visual";
-    visual.setAttribute("aria-hidden", "true");
-    visual.textContent = product.symbol;
+    const imageArea = document.createElement("div");
+    imageArea.className = "product-image";
+    imageArea.style.setProperty("--product-bg", product.bg);
+    imageArea.style.setProperty("--wax", product.wax);
 
-    const content = document.createElement("div");
-    content.className = "product-card-content";
+    if (
+      product.image &&
+      product.image !== "HIER_FOTO_URL_EINFUEGEN"
+    ) {
+      const img = document.createElement("img");
+      img.src = product.image;
+      img.alt = product.name;
+      img.loading = "lazy";
+
+      img.addEventListener("error", () => {
+        img.remove();
+        const placeholder = document.createElement("div");
+        placeholder.className = "image-placeholder";
+        placeholder.textContent = "Bild konnte nicht geladen werden";
+        imageArea.appendChild(placeholder);
+      });
+
+      imageArea.appendChild(img);
+    } else {
+      const candle = document.createElement("div");
+      candle.className = "candle-art";
+      candle.setAttribute("role", "img");
+      candle.setAttribute("aria-label", product.name);
+
+      const placeholder = document.createElement("div");
+      placeholder.className = "image-placeholder";
+      placeholder.textContent = "HIER FOTO URL EINFÜGEN";
+
+      imageArea.append(candle, placeholder);
+    }
+
+    const info = document.createElement("div");
+    info.className = "product-info";
 
     const title = document.createElement("h3");
     title.textContent = product.name;
 
     const description = document.createElement("p");
+    description.className = "description";
     description.textContent = product.description;
 
-    const price = document.createElement("p");
+    const price = document.createElement("div");
     price.className = "product-price";
-    price.textContent =
-      product.price.toLocaleString("de-DE", {
-        style: "currency",
-        currency: "EUR"
-      });
+    price.textContent = formatPrice(product.price);
 
-    const buyButton = document.createElement("a");
-    buyButton.className = "button";
-    buyButton.textContent = "Produkt anfragen";
-    buyButton.href =
-      "mailto:" +
-      shopEmail +
-      "?subject=" +
-      encodeURIComponent("Produktanfrage: " + product.subject);
+    const actions = document.createElement("div");
+    actions.className = "product-actions";
 
-    const note = document.createElement("p");
-    note.className = "product-note";
-    note.textContent = "Bestellung per E-Mail anfragen";
+    const buy = document.createElement("a");
+    buy.className = "button";
+    buy.href = product.link;
+    buy.target = "_blank";
+    buy.rel = "noopener noreferrer";
+    buy.textContent = "Jetzt kaufen";
 
-    content.append(title, description, price, buyButton, note);
-    card.append(visual, content);
+    const add = document.createElement("button");
+    add.className = "button-secondary";
+    add.type = "button";
+    add.textContent = "In den Warenkorb";
+
+    add.addEventListener("click", () => {
+      add.textContent = "Hinzugefügt ✓";
+      add.setAttribute("aria-label", product.name + " hinzugefügt");
+
+      const status = document.createElement("p");
+      status.className = "cart-status";
+      status.setAttribute("role", "status");
+      status.textContent =
+        product.name + " wurde ausgewählt. " +
+        "Bitte nutze „Jetzt kaufen“, um dieses Produkt separat zu bezahlen.";
+
+      const previous = actions.querySelector(".cart-status");
+      if (previous) previous.remove();
+
+      actions.appendChild(status);
+    });
+
+    actions.append(buy, add);
+    info.append(title, description, price, actions);
+    card.append(imageArea, info);
     container.appendChild(card);
   });
 }
 
-/* =====================================
-   KONTAKTFORMULAR
-===================================== */
+const form = document.getElementById("contact-form");
 
-function setupContactForm() {
-  const form = document.getElementById("contactForm");
-
-  if (!form) return;
-
+if (form) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const formData = new FormData(form);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const message = String(formData.get("message") || "").trim();
+    const email = document.getElementById("customer-email").value.trim();
+    const message = document.getElementById("customer-message").value.trim();
+    const status = document.getElementById("contact-status");
 
-    if (!name || !email || !message) {
-      alert("Bitte fülle alle Felder aus.");
+    if (!shopEmail || shopEmail === "HIER_E-MAIL_EINFUEGEN") {
+      status.textContent =
+        "Bitte trage zuerst deine E-Mail-Adresse im script.js ein.";
       return;
     }
 
-    const subject = encodeURIComponent(
-      "Nachricht über die Kroizauber-Website"
+    const subject = encodeURIComponent("Nachricht über Kerzenzauber");
+    const body = encodeURIComponent(
+      "Kunden-E-Mail: " + email + "\n\nNachricht:\n" + message
     );
 
-    const body = encodeURIComponent(
-      "Name: " + name + "\n" +
-      "E-Mail: " + email + "\n\n" +
-      "Nachricht:\n" + message
-    );
+    status.textContent =
+      "Dein E-Mail-Programm wird geöffnet. Bitte sende die Nachricht dort ab.";
 
     window.location.href =
       "mailto:" + shopEmail +
@@ -149,189 +197,7 @@ function setupContactForm() {
   });
 }
 
-/* =====================================
-   JAHR IM FOOTER
-===================================== */
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
 
-function setupFooterYear() {
-  const year = document.getElementById("year");
-
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
-}
-
-/* =====================================
-   MINISPIEL: RETTE DIE KERZEN!
-===================================== */
-
-function setupKerzenspiel() {
-  const feld = document.getElementById("gameCandles");
-  const zeitAnzeige = document.getElementById("gameTime");
-  const anzahlAnzeige = document.getElementById("gameLit");
-  const nachricht = document.getElementById("gameMessage");
-  const startButton = document.getElementById("startCandleGame");
-
-  if (!feld || !zeitAnzeige || !anzahlAnzeige || !nachricht || !startButton) {
-    console.error("Das Kerzenspiel konnte nicht initialisiert werden.");
-    return;
-  }
-
-  const ANZAHL_KERZEN = 20;
-  const SPIELZEIT = 15;
-
-  let kerzen = [];
-  let laeuft = false;
-  let endzeit = 0;
-  let countdown = null;
-  let loeschTimer = null;
-  let spielGeneration = 0;
-
-  function timerStoppen() {
-    clearInterval(countdown);
-    clearInterval(loeschTimer);
-
-    countdown = null;
-    loeschTimer = null;
-  }
-
-  function statistikAktualisieren() {
-    const verbleibend = laeuft
-      ? Math.max(0, Math.ceil((endzeit - Date.now()) / 1000))
-      : Number(zeitAnzeige.textContent);
-
-    zeitAnzeige.textContent = String(verbleibend);
-    anzahlAnzeige.textContent = String(
-      kerzen.filter((kerze) => kerze.brennt).length
-    );
-  }
-
-  function kerzenZeichnen() {
-    feld.replaceChildren();
-
-    kerzen.forEach((kerze, index) => {
-      const button = document.createElement("button");
-
-      button.type = "button";
-      button.className = "game-candle";
-      button.textContent = kerze.brennt ? "🕯️" : "🌫️";
-      button.setAttribute(
-        "aria-label",
-        "Kerze " + (index + 1) + (kerze.brennt ? " brennt" : " ist aus")
-      );
-
-      if (!kerze.brennt) {
-        button.classList.add("off");
-      }
-
-      button.addEventListener("click", () => {
-        if (!laeuft || kerze.brennt) return;
-
-        kerze.brennt = true;
-        kerzenZeichnen();
-        statistikAktualisieren();
-      });
-
-      feld.appendChild(button);
-    });
-  }
-
-  function spielBeenden(generation) {
-    if (!laeuft || generation !== spielGeneration) return;
-
-    laeuft = false;
-    timerStoppen();
-
-    const alleBrennen = kerzen.every((kerze) => kerze.brennt);
-
-    zeitAnzeige.textContent = "0";
-
-    if (alleBrennen) {
-      nachricht.textContent =
-        "🎉 Gewonnen! Alle 20 Kerzen brennen noch!";
-    } else {
-      nachricht.textContent =
-        "⏰ Die Zeit ist um! Versuche es noch einmal.";
-    }
-
-    startButton.textContent = "Noch einmal spielen";
-    statistikAktualisieren();
-  }
-
-  function kerzeLoeschen() {
-    if (!laeuft) return;
-
-    const brennendeKerzen = kerzen.filter((kerze) => kerze.brennt);
-
-    if (brennendeKerzen.length === 0) return;
-
-    const index = Math.floor(Math.random() * brennendeKerzen.length);
-    brennendeKerzen[index].brennt = false;
-
-    kerzenZeichnen();
-    statistikAktualisieren();
-  }
-
-  function spielStarten() {
-    timerStoppen();
-
-    spielGeneration += 1;
-    const generation = spielGeneration;
-
-    kerzen = Array.from(
-      { length: ANZAHL_KERZEN },
-      () => ({ brennt: true })
-    );
-
-    laeuft = true;
-    endzeit = Date.now() + SPIELZEIT * 1000;
-
-    nachricht.textContent =
-      "Schnell! Tippe auf jede erloschene Kerze!";
-    startButton.textContent = "Spiel läuft …";
-
-    kerzenZeichnen();
-    statistikAktualisieren();
-
-    // Alle drei Sekunden geht eine zufällige Kerze aus.
-    loeschTimer = setInterval(kerzeLoeschen, 3000);
-
-    countdown = setInterval(() => {
-      if (!laeuft || generation !== spielGeneration) return;
-
-      statistikAktualisieren();
-
-      if (Date.now() >= endzeit) {
-        spielBeenden(generation);
-      }
-    }, 100);
-  }
-
-  startButton.addEventListener("click", spielStarten);
-
-  kerzen = Array.from(
-    { length: ANZAHL_KERZEN },
-    () => ({ brennt: true })
-  );
-
-  zeitAnzeige.textContent = String(SPIELZEIT);
-  kerzenZeichnen();
-  statistikAktualisieren();
-}
-
-/* =====================================
-   WEBSITE STARTEN
-===================================== */
-
-function websiteStarten() {
-  renderProducts();
-  setupContactForm();
-  setupFooterYear();
-  setupKerzenspiel();
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", websiteStarten);
-} else {
-  websiteStarten();
-}
+renderProducts();
