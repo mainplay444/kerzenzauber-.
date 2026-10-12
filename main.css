@@ -891,3 +891,46 @@ footer a {
     height: 28px;
   }
 }
+/* Правильное расположение игры на телефоне */
+.game-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Свечи по центру */
+.candles {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 420px;
+    margin: 25px auto;
+    box-sizing: border-box;
+}
+
+/* Чтобы свечи не обрезались */
+.candle {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* На маленьких экранах */
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    .game-card {
+        padding: 20px 10px;
+        margin: 30px auto 15px;
+    }
+
+    .candles {
+        gap: 6px;
+    }
+}
