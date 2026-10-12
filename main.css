@@ -800,3 +800,94 @@ footer a {
     transition: none !important;
   }
 }
+/* Verbesserte Darstellung auf Smartphones */
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px 6px;
+    align-items: flex-start;
+  }
+
+  .game-card {
+    width: 100%;
+    padding: 22px 8px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .description {
+    font-size: 14px;
+    padding: 0 6px;
+  }
+
+  .candles {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 5px;
+    width: 100%;
+  }
+
+  .candle {
+    min-width: 0;
+    min-height: 120px;
+    padding: 8px 2px;
+  }
+
+  .wax {
+    width: 28px;
+    height: 48px;
+  }
+
+  .flame {
+    width: 18px;
+    height: 25px;
+  }
+
+  .number {
+    font-size: 10px;
+  }
+
+  .stat {
+    padding: 12px 4px;
+  }
+
+  .stat span {
+    font-size: 10px;
+  }
+
+  .stat strong {
+    font-size: 22px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .candles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .candle {
+    min-height: 135px;
+  }
+
+  .wax {
+    width: 36px;
+    height: 55px;
+  }
+
+  .flame {
+    width: 20px;
+    height: 28px;
+  }
+}
