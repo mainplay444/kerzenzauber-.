@@ -11,81 +11,7 @@
   <link rel="stylesheet" href="./main.css">
   <script src="./script.js" defer></script>
 </head>
-<body>
-  <header class="header">
-    <a class="logo" href="#start">Kerzen<span>zauber</span></a>
-    <nav>
-      <a href="#start">Startseite</a>
-      <a href="#produkte">Kerzen</a>
-      <a href="#ueber-uns">Über uns</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="start">
-      <div class="hero-content">
-        <p class="eyebrow">LICHT · DUFT · GEMÜTLICHKEIT</p>
-        <h1>Ein kleines Licht.<br><span>Ein großes Gefühl.</span></h1>
-        <p>Entdecke besondere Kerzen für gemütliche Momente und dein Zuhause.</p>
-        <a class="button" href="#produkte">Kollektion entdecken</a>
-      </div>
-      <div class="hero-symbol" aria-hidden="true">✦</div>
-    </section>
-
-    <section class="section" id="produkte">
-      <div class="section-heading">
-        <p class="eyebrow">UNSERE KOLLEKTION</p>
-        <h2>Unsere Lieblingskerzen</h2>
-        <p>Finde dein Lieblingslicht.</p>
-      </div>
-      <div class="products-grid" id="products"></div>
-    </section>
-
-    <section class="about" id="ueber-uns">
-      <div class="about-icon">K</div>
-      <div>
-        <p class="eyebrow">KERZENZAUBER</p>
-        <h2>Licht für deine besonderen Momente</h2>
-        <p>Entdecke liebevoll ausgewählte Kerzen zum Entspannen, Dekorieren und Verschenken.</p>
-      </div>
-    </section>
-
-    <section class="section contact" id="kontakt">
-      <div class="section-heading">
-        <p class="eyebrow">KONTAKT</p>
-        <h2>Schreib uns</h2>
-        <p>Hast du Fragen? Wir freuen uns auf deine Nachricht.</p>
-      </div>
-
-      <form id="contact-form" class="contact-form">
-        <label for="customer-email">Deine E-Mail-Adresse</label>
-        <input id="customer-email" type="email" placeholder="Geben Sie hier Ihre E-Mail-Adresse ein" required>
-
-        <label for="customer-message">Deine Nachricht</label>
-        <textarea id="customer-message" rows="5" placeholder="Schreibe deine Nachricht ..." required></textarea>
-
-        <button class="button" type="submit">Nachricht vorbereiten</button>
-        <p class="form-note">Dein E-Mail-Programm öffnet sich zum Versenden.</p>
-        <p id="contact-status" role="status"></p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <a class="logo footer-logo" href="#start">Kerzen<span>zauber</span></a>
-    <p>Licht, Wärme und Gemütlichkeit.</p>
-    <div class="footer-links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="widerruf.html">Widerruf</a>
-      <a href="versand.html">Versand</a>
-    </div>
-    <p>© <span id="year"></span> Kerzenzauber</p>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -164,5 +90,80 @@
       <a href="index.html">← Zurück zum Shop</a>
     </footer>
   </main>
+</body>
+</html>
+
+<body>
+  <header class="header">
+    <a class="logo" href="#start">Kerzen<span>zauber</span></a>
+    <nav>
+      <a href="#start">Startseite</a>
+      <a href="#produkte">Kerzen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="start">
+      <div class="hero-content">
+        <p class="eyebrow">LICHT · DUFT · GEMÜTLICHKEIT</p>
+        <h1>Ein kleines Licht.<br><span>Ein großes Gefühl.</span></h1>
+        <p>Entdecke besondere Kerzen für gemütliche Momente und dein Zuhause.</p>
+        <a class="button" href="#produkte">Kollektion entdecken</a>
+      </div>
+      <div class="hero-symbol" aria-hidden="true">✦</div>
+    </section>
+
+    <section class="section" id="produkte">
+      <div class="section-heading">
+        <p class="eyebrow">UNSERE KOLLEKTION</p>
+        <h2>Unsere Lieblingskerzen</h2>
+        <p>Finde dein Lieblingslicht.</p>
+      </div>
+      <div class="products-grid" id="products"></div>
+    </section>
+
+    <section class="about" id="ueber-uns">
+      <div class="about-icon">K</div>
+      <div>
+        <p class="eyebrow">KERZENZAUBER</p>
+        <h2>Licht für deine besonderen Momente</h2>
+        <p>Entdecke liebevoll ausgewählte Kerzen zum Entspannen, Dekorieren und Verschenken.</p>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontakt">
+      <div class="section-heading">
+        <p class="eyebrow">KONTAKT</p>
+        <h2>Schreib uns</h2>
+        <p>Hast du Fragen? Wir freuen uns auf deine Nachricht.</p>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <label for="customer-email">Deine E-Mail-Adresse</label>
+        <input id="customer-email" type="email" placeholder="Geben Sie hier Ihre E-Mail-Adresse ein" required>
+
+        <label for="customer-message">Deine Nachricht</label>
+        <textarea id="customer-message" rows="5" placeholder="Schreibe deine Nachricht ..." required></textarea>
+
+        <button class="button" type="submit">Nachricht vorbereiten</button>
+        <p class="form-note">Dein E-Mail-Programm öffnet sich zum Versenden.</p>
+        <p id="contact-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo footer-logo" href="#start">Kerzen<span>zauber</span></a>
+    <p>Licht, Wärme und Gemütlichkeit.</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="widerruf.html">Widerruf</a>
+      <a href="versand.html">Versand</a>
+    </div>
+    <p>© <span id="year"></span> Kerzenzauber</p>
+  </footer>
 </body>
 </html>
