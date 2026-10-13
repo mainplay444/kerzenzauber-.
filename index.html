@@ -1,1 +1,368 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17140f">
+  <meta name="description" content="Kroizauber – handgemachte Kerzen, liebevolle Details und kleine Lichtmomente für dein Zuhause.">
+  <title>Kroizauber — Handgemachte Kerzen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
+  <div class="announcement" role="note">
+    <span class="announcement__sparkle" aria-hidden="true">✦</span>
+    Kleine Lichtmomente, mit Liebe gemacht
+    <span class="announcement__sparkle" aria-hidden="true">✦</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="header-inner container">
+      <button class="icon-button menu-toggle" id="menu-toggle" type="button"
+              aria-label="Menü öffnen" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+
+      <a class="brand" href="#home" aria-label="Kroizauber Startseite">
+        <span class="brand__mark" aria-hidden="true">✦</span>
+        <span class="brand__name">Kroi<span>zauber</span></span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Hauptnavigation">
+        <a href="#home">Startseite</a>
+        <a href="#products">Kollektion</a>
+        <a href="#story">Unsere Idee</a>
+        <a href="#care">Kerzenpflege</a>
+        <a href="#game">Kerzenspiel</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button favorite-shortcut" id="favorites-shortcut" type="button"
+                aria-label="Favoriten anzeigen" title="Favoriten">
+          <span aria-hidden="true">♡</span>
+          <span class="header-count" id="favorites-count">0</span>
+        </button>
+        <button class="icon-button cart-toggle" id="cart-toggle" type="button"
+                aria-label="Warenkorb öffnen" aria-controls="cart-panel">
+          <span aria-hidden="true">♧</span>
+          <span class="cart-label">Warenkorb</span>
+          <span class="header-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-scrim" id="page-scrim" hidden></div>
+
+  <main id="main">
+    <section class="hero section-shell" id="home">
+      <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
+      <div class="container hero__layout">
+        <div class="hero__copy reveal">
+          <p class="eyebrow"><span class="eyebrow__line"></span> MIT LIEBE HANDGEMACHT</p>
+          <h1>Ein kleines Licht.<br><em>Ein großes Gefühl.</em></h1>
+          <p class="hero__description">
+            Entdecke besondere Kerzen für ruhige Abende, liebevolle Geschenke
+            und die kleinen Momente, die den Alltag wärmer machen.
+          </p>
+          <div class="hero__buttons">
+            <a class="button button--gold" href="#products">Kollektion entdecken <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#story">Mehr über Kroizauber <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero__trust">
+            <span class="hero__trust-icon" aria-hidden="true">✧</span>
+            <span>Mit Sorgfalt ausgewählt</span>
+            <span class="hero__trust-dot" aria-hidden="true"></span>
+            <span>Für besondere Augenblicke</span>
+          </div>
+        </div>
+        <div class="hero-art reveal" aria-label="Dekorative Illustration einer Kerze">
+          <div class="hero-art__halo"></div>
+          <div class="hero-art__moon"></div>
+          <div class="hero-art__spark hero-art__spark--one">✦</div>
+          <div class="hero-art__spark hero-art__spark--two">✧</div>
+          <div class="hero-art__spark hero-art__spark--three">·</div>
+          <div class="hero-art__candle">
+            <div class="hero-art__flame"></div>
+            <div class="hero-art__wick"></div>
+            <div class="hero-art__wax-top"></div>
+            <div class="hero-art__wax-shine"></div>
+            <div class="hero-art__label">KROIZAUBER</div>
+          </div>
+          <div class="hero-art__platform"></div>
+          <div class="hero-art__caption"><span>01</span> Licht, das Geschichten erzählt</div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#products" aria-label="Nach unten scrollen"><span></span></a>
+    </section>
+
+    <section class="benefit-strip" aria-label="Unsere Werte">
+      <div class="container benefit-strip__grid">
+        <article class="benefit">
+          <span class="benefit__icon" aria-hidden="true">✧</span>
+          <div><h2>Mit Liebe gewählt</h2><p>Besondere Details für dein Zuhause</p></div>
+        </article>
+        <article class="benefit">
+          <span class="benefit__icon" aria-hidden="true">☼</span>
+          <div><h2>Warme Atmosphäre</h2><p>Kleine Lichtmomente im Alltag</p></div>
+        </article>
+        <article class="benefit">
+          <span class="benefit__icon" aria-hidden="true">♡</span>
+          <div><h2>Zum Verschenken</h2><p>Eine schöne Idee für liebe Menschen</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalog section-shell" id="collection">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow__line"></span> DIE KOLLEKTION</p>
+          <h2>Finde dein <em>Lieblingslicht.</em></h2>
+          <p>Jede Kerze hat ihren eigenen Charakter. Entdecke die Kollektion und finde das Stück, das zu dir passt.</p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <label class="search-field" for="product-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="product-search" type="search" placeholder="Kerze suchen …" autocomplete="off">
+            <span class="search-field__hint">Suche</span>
+          </label>
+          <div class="catalog-toolbar__right">
+            <label class="select-wrap" for="product-sort">
+              <span class="sr-only">Produkte sortieren</span>
+              <select id="product-sort">
+                <option value="featured">Empfohlen</option>
+                <option value="name-asc">Name: A–Z</option>
+                <option value="name-desc">Name: Z–A</option>
+                <option value="price-asc">Preis: aufsteigend</option>
+                <option value="price-desc">Preis: absteigend</option>
+              </select>
+            </label>
+            <button class="filter-chip" id="favorites-filter" type="button" aria-pressed="false">
+              <span aria-hidden="true">♡</span> Favoriten
+            </button>
+          </div>
+        </div>
+
+        <div class="catalog-status" id="catalog-status" aria-live="polite">Unsere Kollektion</div>
+        <div class="products-grid" id="products" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-state__icon" aria-hidden="true">✧</span>
+          <h3>Keine Kerzen gefunden</h3>
+          <p>Ändere deinen Suchbegriff oder setze die Filter zurück.</p>
+          <button class="button button--outline" id="reset-filters" type="button">Filter zurücksetzen</button>
+        </div>
+        <p class="catalog-note">Die angezeigten Preise beziehen sich auf die jeweilige Kerze. Versand- und Zahlungsbedingungen findest du auf der Verkaufsplattform.</p>
+      </div>
+    </section>
+
+    <section class="story section-shell" id="story">
+      <div class="container story__layout">
+        <div class="story-art reveal" aria-hidden="true">
+          <div class="story-art__frame">
+            <div class="story-art__sun"></div>
+            <div class="story-art__plant story-art__plant--left">❧</div>
+            <div class="story-art__plant story-art__plant--right">❧</div>
+            <div class="story-art__candle"><span></span></div>
+            <div class="story-art__caption">Ein Moment nur für dich</div>
+          </div>
+          <span class="story-art__deco story-art__deco--one">✦</span>
+          <span class="story-art__deco story-art__deco--two">✧</span>
+        </div>
+        <div class="story__copy reveal">
+          <p class="eyebrow"><span class="eyebrow__line"></span> UNSERE IDEE</p>
+          <h2>Mehr als Licht.<br><em>Ein Gefühl von Zuhause.</em></h2>
+          <p>
+            Kroizauber steht für kleine Dinge, die einen Raum besonders machen.
+            Eine sanfte Farbe, ein liebevolles Geschenk oder ein ruhiger Abend
+            mit warmem Licht – manchmal braucht es gar nicht viel.
+          </p>
+          <p>
+            Wir möchten dir helfen, genau diese kleinen Momente zu entdecken.
+            Schau dich in unserer Kollektion um und finde eine Kerze, die zu
+            deinem persönlichen Wohlfühlort passt.
+          </p>
+          <a class="text-link" href="#products">Unsere Kerzen ansehen <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="care section-shell" id="care">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow__line"></span> KLEINE PFLEGETIPPS</p>
+          <h2>Damit dein Licht <em>schön bleibt.</em></h2>
+          <p>Ein paar einfache Hinweise für einen bewussten und angenehmen Umgang mit Kerzen.</p>
+        </div>
+        <div class="care-grid">
+          <article class="care-card reveal">
+            <span class="care-card__number">01</span>
+            <span class="care-card__icon" aria-hidden="true">⌂</span>
+            <h3>Ein sicherer Platz</h3>
+            <p>Stelle Kerzen auf eine stabile, hitzebeständige Fläche und halte Abstand zu Vorhängen, Papier und anderen brennbaren Dingen.</p>
+          </article>
+          <article class="care-card reveal">
+            <span class="care-card__number">02</span>
+            <span class="care-card__icon" aria-hidden="true">〰</span>
+            <h3>Wenig Zugluft</h3>
+            <p>Vermeide Zugluft und stelle Kerzen nicht direkt neben offene Fenster oder Ventilatoren. So brennt die Flamme ruhiger.</p>
+          </article>
+          <article class="care-card reveal">
+            <span class="care-card__number">03</span>
+            <span class="care-card__icon" aria-hidden="true">♡</span>
+            <h3>Immer aufmerksam</h3>
+            <p>Lass eine brennende Kerze niemals unbeaufsichtigt und halte sie von Kindern und Haustieren fern. Lösche sie vor dem Verlassen des Raums.</p>
+          </article>
+        </div>
+        <p class="safety-note"><span aria-hidden="true">✧</span> Kerzen sind offenes Feuer. Beachte immer die Hinweise des jeweiligen Herstellers.</p>
+      </div>
+    </section>
+
+    <section class="game-section section-shell" id="game">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow__line"></span> SPIELEN & ENTDECKEN</p>
+          <h2>Kerzen <em>auspusten.</em></h2>
+          <p>Du hast 20 Sekunden. Tippe auf so viele brennende Kerzen wie möglich und entdecke deinen Spielcode.</p>
+        </div>
+
+        <div class="game-card reveal">
+          <div class="game-card__top">
+            <div class="game-stat">
+              <span class="game-stat__label">ZEIT ÜBRIG</span>
+              <strong class="game-stat__value" id="game-timer">20</strong>
+              <span class="game-stat__unit">Sekunden</span>
+            </div>
+            <div class="game-card__brand" aria-hidden="true">
+              <span>✦</span><span class="game-card__brand-name">Kroizauber</span><span>✦</span>
+            </div>
+            <div class="game-stat game-stat--right">
+              <span class="game-stat__label">DEINE PUNKTE</span>
+              <strong class="game-stat__value"><span id="game-score">0</span><small> / 20</small></strong>
+              <span class="game-stat__unit">selbst ausgepustet</span>
+            </div>
+          </div>
+
+          <div class="timer-track" role="progressbar" aria-label="Verbleibende Spielzeit"
+               aria-valuemin="0" aria-valuemax="20" aria-valuenow="20" id="timer-progress">
+            <div class="timer-bar" id="timer-bar"></div>
+          </div>
+
+          <p class="game-instruction" id="game-instruction" aria-live="polite">
+            Alle Kerzen sind bereit. Starte das Spiel und tippe auf die Flammen!
+          </p>
+          <div class="candle-board" id="candle-board" aria-label="20 Kerzen. Tippe auf eine Flamme, um sie auszupusten."></div>
+
+          <div class="game-result" id="game-result" aria-live="polite" hidden>
+            <span class="game-result__sparkle" aria-hidden="true">✧</span>
+            <p class="eyebrow">DEIN SPIELERGEBNIS</p>
+            <h3 id="result-title">Gut gemacht!</h3>
+            <p id="result-description"></p>
+            <div class="coupon-box">
+              <span class="coupon-box__label">DEIN CODE</span>
+              <strong id="coupon-code">—</strong>
+              <button class="button button--outline" id="copy-coupon" type="button">Code kopieren</button>
+            </div>
+            <p class="game-result__note">
+              Hinweis: Der Spielcode wird auf dieser Website erzeugt. Eine automatische Preisänderung
+              bei Vinted oder Stripe findet dadurch nicht statt.
+            </p>
+          </div>
+
+          <button class="button button--gold game-start" id="start-game" type="button">Spiel starten <span aria-hidden="true">→</span></button>
+          <p class="game-footnote">20 Sekunden · 20 Kerzen · Funktioniert auf Handy und Computer</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter section-shell">
+      <div class="container newsletter__inner">
+        <div>
+          <p class="eyebrow">EIN KLEINER LICHTBLICK</p>
+          <h2>Fragen? Wir freuen uns auf deine Nachricht.</h2>
+          <p>Schreib uns über das Kontaktformular – dein E-Mail-Programm öffnet sich mit deiner Nachricht.</p>
+        </div>
+        <a class="button button--light" href="#contact">Kontakt aufnehmen <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact">
+      <div class="container contact__layout">
+        <div class="contact__intro">
+          <p class="eyebrow"><span class="eyebrow__line"></span> WIR SIND FÜR DICH DA</p>
+          <h2>Schreib uns<br><em>ein paar Zeilen.</em></h2>
+          <p>Du hast eine Frage zu einer Kerze oder möchtest etwas wissen? Sende uns eine Nachricht.</p>
+          <div class="contact__email-card">
+            <span class="contact__email-icon" aria-hidden="true">✉</span>
+            <div><span class="contact__email-label">E-MAIL</span><a href="mailto:tatansavenok35@gmail.com">tatansavenok35@gmail.com</a></div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-field">
+            <label for="customer-email">Deine E-Mail-Adresse</label>
+            <input id="customer-email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="customer-message">Deine Nachricht</label>
+            <textarea id="customer-message" name="message" rows="5" placeholder="Wie können wir dir helfen?" required></textarea>
+          </div>
+          <button class="button button--gold contact-form__submit" type="submit">Nachricht vorbereiten <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="contact-status" role="status"></p>
+          <p class="form-privacy">Beim Absenden öffnet sich dein E-Mail-Programm. Die Nachricht wird nicht direkt auf dieser Website versendet.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cart-panel" aria-label="Warenkorb" aria-hidden="true">
+    <div class="cart-panel__header">
+      <div><p class="eyebrow">DEINE AUSWAHL</p><h2>Warenkorb</h2></div>
+      <button class="icon-button cart-close" id="cart-close" type="button" aria-label="Warenkorb schließen">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty">
+      <span aria-hidden="true">♡</span>
+      <h3>Dein Warenkorb ist noch leer</h3>
+      <p>Entdecke die Kollektion und füge eine Kerze hinzu.</p>
+      <button class="button button--outline" id="continue-shopping" type="button">Weiter stöbern</button>
+    </div>
+    <div class="cart-panel__footer" id="cart-footer" hidden>
+      <div class="cart-total"><span>Zwischensumme</span><strong id="cart-subtotal">0,00 €</strong></div>
+      <p>Die Bestellung und Zahlung erfolgen über die jeweilige Verkaufsplattform.</p>
+      <button class="button button--gold cart-checkout" id="cart-checkout" type="button">Zum Kauf weitergehen</button>
+      <button class="text-link cart-clear" id="cart-clear" type="button">Warenkorb leeren</button>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand brand--footer" href="#home"><span class="brand__mark" aria-hidden="true">✦</span><span class="brand__name">Kroi<span>zauber</span></span></a>
+          <p>Kleine Lichtmomente für dein Zuhause.</p>
+        </div>
+        <div class="footer-links">
+          <div><h2>Entdecken</h2><a href="#products">Kollektion</a><a href="#story">Unsere Idee</a><a href="#game">Kerzenspiel</a></div>
+          <div><h2>Hilfe</h2><a href="#care">Kerzenpflege</a><a href="#contact">Kontakt</a><a href="mailto:tatansavenok35@gmail.com">E-Mail</a></div>
+        </div>
+        <a class="back-to-top" href="#top" aria-label="Zurück nach oben">↑</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Kroizauber. Mit Liebe gestaltet.</p>
+        <p class="footer-disclaimer">Produktkäufe werden über die verlinkten Plattformen abgewickelt.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
