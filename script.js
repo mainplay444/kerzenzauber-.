@@ -585,6 +585,84 @@ function checkoutCart() {
   }
 
   const entries = [...state.cart.entries()];
+
+  // Ein Produkt: direkt zur passenden Vinted-Anzeige
+  if (entries.length === 1) {
+    const [productId, quantity] = entries[0];
+    const product = findProduct(productId);
+
+    if (!product || !product.link) {
+      showToast("Der Produktlink ist nicht verfügbar.", "error");
+      return;
+    }
+
+    if (quantity > 1) {
+      showToast(
+        "Bitte prüfe auf Vinted, ob mehrere Stück verfügbar sind.",
+        "error"
+      );
+    }
+
+    window.open(product.link, "_blank", "noopener,noreferrer");
+    return;
+  }
+
+  // Mehrere Produkte: alle Verkaufslinks übersichtlich anzeigen
+  const itemsContainer = byId("cart-items");
+  if (!itemsContainer) {
+    showToast("Die Warenkorbansicht wurde nicht gefunden.", "error");
+    return;
+  }
+
+  let linkPanel = byId("cart-vinted-links");
+
+  if (!linkPanel) {
+    linkPanel = createElement("section", "cart-vinted-links");
+    linkPanel.id = "cart-vinted-links";
+    linkPanel.setAttribute("aria-label", "Vinted-Kauflinks");
+    itemsContainer.after(linkPanel);
+  }
+
+  linkPanel.replaceChildren();
+
+  linkPanel.appendChild(
+    createElement("h3", "", "Deine Kerzen auf Vinted")
+  );
+
+  linkPanel.appendChild(
+    createElement(
+      "p",
+      "",
+      "Öffne die Anzeigen einzeln. Die Bestellung und Versandkosten werden auf Vinted geprüft."
+    )
+  );
+
+  entries.forEach(([productId, quantity]) => {
+    const product = findProduct(productId);
+    if (!product) return;
+
+    const row = createElement("div", "cart-vinted-link-item");
+    const details = createElement(
+      "p",
+      "",
+      `${product.name} × ${quantity} — ${formatPrice(product.price * quantity)}`
+    );
+
+    const link = createElement("a", "button button--gold", "Auf Vinted öffnen ↗");
+    link.href = product.link;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    row.append(details, link);
+    linkPanel.appendChild(row);
+  });
+
+  linkPanel.scrollIntoView({
+    behavior: "smooth",
+    block: "nearest"
+  });
+}
+  const entries = [...state.cart.entries()];
   const firstProduct = findProduct(entries[0][0]);
 
   if (entries.length === 1 && firstProduct) {
