@@ -21,7 +21,7 @@ const products = [
   {
     id: "rosengarten",
     name: "rosengarten",
-    price: 5.00,
+    price: 3.50,
     description: "Ein sanfter Lichtblick für entspannte Momente.",
     image: "https://cdn.phototourl.com/member/2026-10-11-30ded1ea-9bc2-468d-a1b1-cd329c2d48d1.jpg",
     link: "https://www.vinted.de/items/10334352328-handgemachte-bienenwachskerze-in-herzform-100-natur-honig-blutenduft",
@@ -45,7 +45,7 @@ const products = [
   {
     id: "honig-standart",
     name: "honig standart",
-    price: 5.00,
+    price: 3.50,
     description: "Ein Hauch von Wärme für dein Zuhause.",
     image: "https://cdn.phototourl.com/member/2026-10-11-b09e7873-ad7d-431a-bc4e-f513ccc83777.jpg",
     link: "https://www.vinted.de/items/10334260225-handgemachte-bienenwachskerze-100-naturlich-honigduft",
@@ -57,7 +57,7 @@ const products = [
   {
     id: "golden-abent-metal",
     name: "golden Abent [metal]",
-    price: 5.00,
+    price: 3.50,
     description: "Ein romantischer Akzent für besondere Momente.",
     image: "https://cdn.phototourl.com/member/2026-10-11-4f892ae9-3896-40de-a1ec-c3a6d1fe6815.jpg",
     link: "https://www.vinted.de/items/10334499362-handgemachte-bienenwachskerze-100-natur-pur",
@@ -69,7 +69,7 @@ const products = [
   {
     id: "waldzauber",
     name: "Kerze Waldzauber",
-    price: 5.00,
+    price: 3.50,
     description: "Inspiriert von der Schönheit der Natur.",
     image: "https://cdn.phototourl.com/member/2026-10-11-ad0133de-9829-4d8d-8654-8f77fcb8074a.jpg",
     link: "https://www.vinted.de/items/10334444539-handgemachte-kerze-aus-100-naturlichem-bienenwachs",
@@ -81,7 +81,7 @@ const products = [
   {
     id: "goldener-abend",
     name: "Kerze Goldener Abend",
-    price: 5.00,
+    price: 3.50,
     description: "Ein warmes Licht für entspannte Abende.",
     image: "https://cdn.phototourl.com/member/2026-10-11-b09e7873-ad7d-431a-bc4e-f513ccc83777.jpg",
     link: "https://buy.stripe.com/test_00w9AUa22aRl4NkcaV00009",
