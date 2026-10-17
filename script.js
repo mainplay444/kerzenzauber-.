@@ -31,7 +31,7 @@ const products = [
     id: "waimachzbaum",
     name: "waimachzbaum",
     price: 5.00,
-    description: "Für gemütliche Pausen und kleine Auszeiten.",
+    description: "https://i.postimg.cc/MGdgG1by/zobrazenna-viber-2026-10-11-15-15-51-119.jpg",
     image: "https://dark-leaf-727.linkyhost.com",
     link: "https://www.vinted.de/items/10334202599-handgemachte-kerze-weihnachtsbaum-aus-naturlichem-wachs",
     bg: "#f0dedc",
