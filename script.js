@@ -32,7 +32,7 @@ const products = [
     name: "waimachzbaum",
     price: 5.00,
     description: "das ist wainacht kreuze fur besonderes momente",
-    image: "[![zobrazenna-viber-2026-10-11-15-15-51-119.jpg](https://i.postimg.cc/GpwPkLvc/zobrazenna-viber-2026-10-11-15-15-51-119.jpg)](https://postimg.cc/Wd8JVP9K)",
+    image: "https://www.image2url.com/r2/default/images/1792236067549-80fbaa72-1272-4bd8-afa3-938f47c4af8e.jpg",
     link: "https://www.vinted.de/items/10334202599-handgemachte-kerze-weihnachtsbaum-aus-naturlichem-wachs",
     bg: "#f0dedc",
     wax: "#e6b9b4",
