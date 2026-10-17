@@ -30,7 +30,7 @@ const products = [
   {
     id: "waimachzbaum",
     name: "waimachzbaum",
-    price: 3.50,
+    price: 5.00,
     description: "Für gemütliche Pausen und kleine Auszeiten.",
     image: "https://dark-leaf-727.linkyhost.com",
     link: "https://i.postimg.cc/MGdgG1by/zobrazenna-viber-2026-10-11-15-15-51-119.jpg",
