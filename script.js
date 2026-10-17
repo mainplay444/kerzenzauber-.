@@ -18,7 +18,7 @@ const products = [
   {
     id: "rosengarten",
     name: "rosengarten",
-    price: 5.00,
+    price: 3.50,
     description: "Ein sanfter Lichtblick für entspannte Momente.",
     image: "https://cdn.phototourl.com/member/2026-10-11-30ded1ea-9bc2-468d-a1b1-cd329c2d48d1.jpg",
     link: "https://www.vinted.de/items/10334352328-handgemachte-bienenwachskerze-in-herzform-100-natur-honig-blutenduft",
